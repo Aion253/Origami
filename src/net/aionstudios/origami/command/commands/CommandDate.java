@@ -7,6 +7,12 @@ import net.aionstudios.origami.command.OrigamiCommand;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
+/**
+ * 
+ * A command that returns the current date on the server in the form of 'Thursday, January 1, 1970'.
+ * @author Winter Roberts
+ *
+ */
 public class CommandDate extends OrigamiCommand {
 	
 	private SimpleDateFormat sdf = new SimpleDateFormat("EEEEE, MMMMM d, yyyy");

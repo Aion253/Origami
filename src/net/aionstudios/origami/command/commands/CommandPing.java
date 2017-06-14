@@ -1,11 +1,14 @@
 package net.aionstudios.origami.command.commands;
 
-import java.util.HashMap;
-
 import net.aionstudios.origami.command.OrigamiCommand;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.core.events.message.priv.PrivateMessageReceivedEvent;
 
+/**
+ * 
+ * A command that returns the ping between the bot and the server in milliseconds.
+ * @author Winter Roberts
+ *
+ */
 public class CommandPing extends OrigamiCommand {
 
 	public CommandPing() {

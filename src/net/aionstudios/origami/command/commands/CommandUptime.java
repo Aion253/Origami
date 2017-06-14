@@ -1,12 +1,16 @@
 package net.aionstudios.origami.command.commands;
 
-import java.awt.Color;
-
 import net.aionstudios.origami.command.OrigamiCommand;
 import net.aionstudios.origami.command.OrigamiCommandManager;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
+/**
+ * 
+ * A command that returns how much time has passed since the bot's most recent connection to the server.
+ * @author Winter Roberts
+ *
+ */
 public class CommandUptime extends OrigamiCommand {
 
 	public CommandUptime() {

@@ -6,6 +6,12 @@ import net.aionstudios.origami.modules.stocks.StockFetcher;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
+/**
+ * 
+ * A command that returns information from a NASDAQ stock if one exists with the provided symbol.
+ * @author Winter Roberts
+ *
+ */
 public class CommandStock extends OrigamiCommand {
 
 	public CommandStock() {
@@ -22,7 +28,7 @@ public class CommandStock extends OrigamiCommand {
 		if(s.getPercentChange().contains("-")) {
 			change = "down "+s.getPercentChange();
 		} else {
-			change = "up +"+s.getPercentChange();
+			change = "up "+s.getPercentChange();
 		}
 		if(s.getName()==null||s.getName()=="") {
 			e.getChannel().sendMessage("Stock ("+args[1]+"): NO SUCH STOCK").queue();

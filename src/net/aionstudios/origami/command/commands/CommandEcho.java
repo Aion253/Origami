@@ -1,11 +1,15 @@
 package net.aionstudios.origami.command.commands;
 
-import java.util.HashMap;
-
 import net.aionstudios.origami.command.OrigamiCommand;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
+/**
+ * 
+ * A command that echo's a string back to the user.
+ * @author Winter Roberts
+ *
+ */
 public class CommandEcho extends OrigamiCommand {
 
 	public CommandEcho() {

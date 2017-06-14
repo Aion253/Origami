@@ -1,8 +1,5 @@
 package net.aionstudios.origami;
 
-import java.io.File;
-import java.io.IOException;
-
 import javax.security.auth.login.LoginException;
 
 import net.aionstudios.ndf.ANDFTree;
@@ -30,16 +27,15 @@ import net.dv8tion.jda.core.exceptions.RateLimitedException;
 /**
  * 
  * An instance of Origami bot that manages everything else.
- * @author Winter
+ * @author Winter Roberts
  *
  */
 public class Origami {
 
 	private static JDA jda;
-	private static String owner;
 	
 	/**
-	 * Creates a new instance of the Origami Bot
+	 * Creates a new instance of the Origami Bot.
 	 * @param token The token used to connect to the server.
 	 */
 	public Origami() {

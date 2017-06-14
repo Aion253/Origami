@@ -2,12 +2,17 @@ package net.aionstudios.origami.command.commands;
 
 import java.awt.Color;
 
-import net.aionstudios.origami.OrigamiInfo;
 import net.aionstudios.origami.command.OrigamiCommand;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
+/**
+ * 
+ * A command that returns current RAM usage information from the hosting JVM and Server.
+ * @author Winter Roberts
+ *
+ */
 public class CommandHeap extends OrigamiCommand {
 
 	public CommandHeap() {

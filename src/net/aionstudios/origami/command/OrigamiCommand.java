@@ -1,14 +1,11 @@
 package net.aionstudios.origami.command;
 
-import java.util.HashMap;
-
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.core.events.message.priv.PrivateMessageReceivedEvent;
 
 /**
  * 
  * An abstract class used to design commands that the bot can handle.
- * @author Winter
+ * @author Winter Roberts
  *
  */
 public abstract class OrigamiCommand {

@@ -7,6 +7,12 @@ import net.aionstudios.origami.command.OrigamiCommand;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
+/**
+ * 
+ * A command that returns the current time on the server in the form of '12:00 AM Pacific Standard Time -0800'.
+ * @author Winter Roberts
+ *
+ */
 public class CommandTime extends OrigamiCommand {
 	
 	private SimpleDateFormat sdf = new SimpleDateFormat("h:mm a zzzz Z");

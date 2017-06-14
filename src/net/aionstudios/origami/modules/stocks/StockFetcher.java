@@ -11,12 +11,18 @@ import java.util.logging.Logger;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * 
+ * A class for fetching stock information.
+ * @author Winter Roberts
+ *
+ */
 public class StockFetcher {  
 	
 	/**
 	* Returns a Stock Object that contains info about a specified stock.
-	* @param 	symbol the company's stock symbol
-	* @return 	a stock object containing info about the company's stock
+	* @param symbol the company's stock symbol
+	* @return a stock object containing info about the company's stock
 	* @see Stock
 	*/
 	public static Stock getStock(String symbol) {  

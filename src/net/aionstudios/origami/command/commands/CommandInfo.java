@@ -8,6 +8,12 @@ import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
+/**
+ * 
+ * A command that returns information about this Origami installation.
+ * @author Winter Roberts
+ *
+ */
 public class CommandInfo extends OrigamiCommand {
 
 	public CommandInfo() {

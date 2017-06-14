@@ -1,12 +1,17 @@
 package net.aionstudios.origami.command.commands;
 
-import java.math.BigInteger;
 import java.util.concurrent.ThreadLocalRandom;
 
 import net.aionstudios.origami.command.OrigamiCommand;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
+/**
+ * 
+ * A command that returns a random long between the two provided numbers.
+ * @author Winter Roberts
+ *
+ */
 public class CommandRandom extends OrigamiCommand {
 	
 	public CommandRandom() {

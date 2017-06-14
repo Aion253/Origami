@@ -1,19 +1,26 @@
 package net.aionstudios.origami.command;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.core.events.message.priv.PrivateMessageReceivedEvent;
 
+/**
+ * 
+ * Acts as a passthrough and processing center between OrigamiListener and the specified command if any.
+ * @author Winter Roberts
+ *
+ */
 public class OrigamiCommandManager {
 	
 	private static List<OrigamiCommand> publicCommands = new ArrayList<OrigamiCommand>();
 	public static long startTime = System.currentTimeMillis();
 	
+	/**
+	 * Derives the requested command when passed by the OrigamiListener.
+	 * @param event The MessageReceivedEvent to be handled.
+	 */
 	public static void onMessageReceived(MessageReceivedEvent event) {
 		String messageText = event.getMessage().getRawContent();
 		if(messageText.startsWith("~")&&!event.getAuthor().isBot()) {
