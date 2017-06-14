@@ -8,6 +8,7 @@ import java.net.URLConnection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class StockFetcher {  
@@ -37,18 +38,24 @@ public class StockFetcher {
 			
 			// Parse CSV Into Array
 			String line = br.readLine();
-			JSONObject obj = new JSONObject(line);
-			JSONObject quote = obj.getJSONObject("query").getJSONObject("results").getJSONObject("quote");
+			try {
+				JSONObject obj = new JSONObject(line);
+				JSONObject quote;
+				quote = obj.getJSONObject("query").getJSONObject("results").getJSONObject("quote");
 			
-			if(!quote.isNull("Bid")) {
-			// Handle Our Data
-			price = parseDouble(quote.getString("Bid"));
-			volume = (int) parseDouble(quote.getString("Volume"));
-			change = parseDouble(quote.getString("Change"));
-			currency = quote.getString("Currency");
-			totalValue = quote.getString("MarketCapitalization");
-			name = quote.getString("Name");
-			percentChange = quote.getString("PercentChange");
+				if(!quote.isNull("Bid")) {
+					// Handle Our Data
+					price = parseDouble(quote.getString("Bid"));
+					volume = (int) parseDouble(quote.getString("Volume"));
+					change = parseDouble(quote.getString("Change"));
+					currency = quote.getString("Currency");
+					totalValue = quote.getString("MarketCapitalization");
+					name = quote.getString("Name");
+					percentChange = quote.getString("PercentChange");
+				}
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 			
 		} catch (IOException e) {
