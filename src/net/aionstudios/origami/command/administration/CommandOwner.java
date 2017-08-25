@@ -20,7 +20,9 @@ public class CommandOwner extends OrigamiCommand {
 
 	@Override
 	public void publicCall(String[] args, String message, MessageReceivedEvent e) {
-		message = message.replace(" ", "");
+		while(message.startsWith(" ")) {
+			message = message.replaceFirst(" ", "");
+		}
 		if(!e.isFromType(ChannelType.PRIVATE)) {
 			e.getChannel().deleteMessageById(e.getMessageIdLong()).queue();
 		}

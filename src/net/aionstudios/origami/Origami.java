@@ -51,7 +51,6 @@ public class Origami {
 				OrigamiInfo.andf.assembleTo(OrigamiInfo.ORIGAMI_CONFIG, ANDFFormats.RECURSIVE_NODE);
 				System.exit(0);
 			}
-			//MzIzNDk1NTMxNTg4NDg1MTIw.DB8FrA.cICLKPWZys_McmQGRyk5wZDgEL8
 			jda = new JDABuilder(AccountType.BOT).setToken(OrigamiInfo.TOKEN).buildBlocking();
 			jda.setAutoReconnect(true);
 			jda.addEventListener(new OrigamiListener());

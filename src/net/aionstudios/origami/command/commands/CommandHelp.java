@@ -26,7 +26,7 @@ public class CommandHelp extends OrigamiCommand {
 		}
 		String helpString = "";
 		for(OrigamiCommand oc:OrigamiCommandManager.getPublicCommands()) {
-			helpString += "  Command: "+oc.getCommand()+"\n    - "+oc.getDesc()+"\n      USAGE: "+oc.getUse()+"\n";
+			helpString += "    "+oc.getCommand()+" - "+oc.getDesc()+"\n      USAGE: "+oc.getUse()+"\n";
 		}
 		if(!e.getAuthor().hasPrivateChannel()) {
 			e.getAuthor().openPrivateChannel().queue();

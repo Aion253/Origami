@@ -18,7 +18,7 @@ public class CommandPing extends OrigamiCommand {
 
 	@Override
 	public void publicCall(String[] args, String message, MessageReceivedEvent e) {
-		e.getChannel().sendMessage(":regional_indicator_p: :regional_indicator_o: :regional_indicator_n: :regional_indicator_g: ! "+e.getJDA().getPing()+"ms").queue();
+		e.getChannel().sendMessage("Pong! "+e.getJDA().getPing()+"ms").queue();
 	}
 
 }
