@@ -3,6 +3,7 @@ package net.aionstudios.origami.modules.stocks;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.logging.Level;
@@ -23,9 +24,10 @@ public class StockFetcher {
 	* Returns a Stock Object that contains info about a specified stock.
 	* @param symbol the company's stock symbol
 	* @return a stock object containing info about the company's stock
-	* @see Stock
+	 * @throws IOException 
+	 * @see Stock
 	*/
-	public static Stock getStock(String symbol) {  
+	public static Stock getStock(String symbol) throws IOException {  
 		String sym = symbol.toUpperCase();
 		double price = 0.0;
 		int volume = 0;
@@ -34,8 +36,6 @@ public class StockFetcher {
 		String totalValue = "";
 		String name = "";
 		String percentChange = "";
-		try { 
-			
 			// Retrieve CSV File
 			URL yahoo = new URL("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22"+symbol+"%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=");
 			URLConnection connection = yahoo.openConnection();
@@ -63,12 +63,6 @@ public class StockFetcher {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-		} catch (IOException e) {
-			Logger log = Logger.getLogger(StockFetcher.class.getName()); 
-			log.log(Level.SEVERE, e.toString(), e);
-			return null;
-		}
 		
 		return new Stock(sym, price, volume, name, currency, change, percentChange, totalValue);
 		
