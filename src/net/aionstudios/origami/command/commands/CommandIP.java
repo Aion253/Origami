@@ -1,15 +1,12 @@
 package net.aionstudios.origami.command.commands;
 
-import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import net.aionstudios.origami.OrigamiInfo;
 import net.aionstudios.origami.command.OrigamiCommand;
 import net.aionstudios.origami.utils.ErrorEmbedGenerator;
-import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 

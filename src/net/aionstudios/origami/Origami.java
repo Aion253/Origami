@@ -11,6 +11,7 @@ import net.aionstudios.origami.command.commands.CommandDate;
 import net.aionstudios.origami.command.commands.CommandEcho;
 import net.aionstudios.origami.command.commands.CommandHeap;
 import net.aionstudios.origami.command.commands.CommandHelp;
+import net.aionstudios.origami.command.commands.CommandIP;
 import net.aionstudios.origami.command.commands.CommandInfo;
 import net.aionstudios.origami.command.commands.CommandPing;
 import net.aionstudios.origami.command.commands.CommandRandom;
@@ -70,6 +71,7 @@ public class Origami {
 			new CommandInfo();
 			new CommandHeap();
 			new CommandRandom();
+			new CommandIP();
 		} catch (LoginException | IllegalArgumentException | InterruptedException | RateLimitedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
